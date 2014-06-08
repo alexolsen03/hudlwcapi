@@ -4,7 +4,8 @@ FOOTBALL_DB_PATH = "#{BUILD_DIR}/football.db"
 
 DB_CONFIG = {
   :adapter   =>  'postgresql',
-  :database  =>  FOOTBALL_DB_PATH,
+  #:database  =>  FOOTBALL_DB_PATH,
+  database: 'hudlwcapi_prod',
   username: 'postgres',
   password: 'code*03'
 }
