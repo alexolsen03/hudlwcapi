@@ -77,6 +77,33 @@ get '/event/:key/teams' do |key|
   json_or_jsonp( data )
 end
 
+get '/event/:key/groups/' do |key|
+  event = Event.find_by_key!( key.tr('_', '/') )
+
+  groups = []
+  event.groups.each do |g|
+    groups << { id: g.id, title: g.title}
+  end
+
+  data = {event: { key: event.key, title: event.full_title}, groups: groups}
+
+  json_or_jsonp( data );
+end
+
+get '/event/:key/group/:id/teams' do |key, id|
+  event = Event.find_by_key!( key.tr('_', '/') )
+  group = event.groups.find_by_id!( id.tr('_', '/'))
+
+  teams = []
+  group.teams.each do |t|
+    teams << {id: t.id, key: t.key, title: t.title}
+  end
+
+  data = {event: { key: event.key, title: event.full_title}, group: group, teams: teams}
+
+  json_or_jsonp( data );
+end
+
 
 get '/event/:key/rounds' do |key|
   # NB: change en.2012_13 to en.2012/13
