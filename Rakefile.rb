@@ -3,11 +3,16 @@ BUILD_DIR = "./build"
 FOOTBALL_DB_PATH = "#{BUILD_DIR}/football.db"
 
 DB_CONFIG = {
-  :adapter   =>  'postgresql',
-  #:database  =>  FOOTBALL_DB_PATH,
-  database: 'hudlwcapi_prod',
-  username: 'postgres',
-  password: 'code*03'
+  # :adapter   =>  'postgresql',
+  # #:database  =>  FOOTBALL_DB_PATH,
+  # database: 'hudlwcapi_prod',
+  # username: 'postgres',
+  # password: 'code*03'
+  adapter: 'postgresql',
+  database: 'd6vv46ice2jscv',
+  username: 'wfjlgnuichedor',
+  password: 'zm90p7LR0diJ3SoA8_2fEpZuT'
+
 }
 
 directory BUILD_DIR
