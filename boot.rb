@@ -28,7 +28,8 @@ db_config = {
     adapter: 'postgresql',
   database: 'd6vv46ice2jscv',
   username: 'wfjlgnuichedor',
-  password: 'zm90p7LR0diJ3SoA8_2fEpZuT'
+  password: 'zm90p7LR0diJ3SoA8_2fEpZuT',
+  host: 'ec2-54-225-243-113.compute-1.amazonaws.com'
 }
 
 pp db_config
