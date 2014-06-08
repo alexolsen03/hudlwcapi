@@ -69,7 +69,7 @@ get '/event/:key/teams' do |key|
 
   teams = []
   event.teams.each do |t|
-    teams << { key: t.key, title: t.title, code: t.code }
+    teams << {id: t.id, key: t.key, title: t.title}
   end
 
   data = { event: { key: event.key, title: event.full_title }, teams: teams }
