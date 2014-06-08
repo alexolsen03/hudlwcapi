@@ -6,6 +6,9 @@ puts "ENV['RACK_ENV'] = #{ENV['RACK_ENV']}"
 
 require 'bundler'
 
+
+require 'active_record'
+
 # ruby core n stdlibs
 require 'json'
 require 'uri'
@@ -18,22 +21,24 @@ Bundler.require(:default, ENV['RACK_ENV'].to_sym)
 
 # Database Setup & Config
 
-db_config = {
-  #adapter:  'sqlite3',
-  # adapter: 'postgresql',
-  # #database: 'football',
-  # database: 'hudlwcapi_prod',
-  # username: 'postgres',
-  # password: 'code*03'    # NOTE: change to use your db of choice (e.g. worldcup.db, bundesliga.db, ski.db etc.)
-    adapter: 'postgresql',
-  database: 'd6vv46ice2jscv',
-  username: 'wfjlgnuichedor',
-  password: 'zm90p7LR0diJ3SoA8_2fEpZuT',
-  host: 'ec2-54-225-243-113.compute-1.amazonaws.com'
-}
+# db_config = {
+#   #adapter:  'sqlite3',
+#   # adapter: 'postgresql',
+#   # #database: 'football',
+#   # database: 'hudlwcapi_prod',
+#   # username: 'postgres',
+#   # password: 'code*03'    # NOTE: change to use your db of choice (e.g. worldcup.db, bundesliga.db, ski.db etc.)
+#     adapter: 'postgresql',
+#   database: 'd6vv46ice2jscv',
+#   username: 'wfjlgnuichedor',
+#   password: 'zm90p7LR0diJ3SoA8_2fEpZuT',
+#   host: 'ec2-54-225-243-113.compute-1.amazonaws.com'
+# }
 
-pp db_config
-ActiveRecord::Base.establish_connection( db_config )
+# pp db_config
+# ActiveRecord::Base.establish_connection( db_config )
+
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/football')
 
 ## for debugging - disable for production use
 ActiveRecord::Base.logger = Logger.new( STDOUT )
