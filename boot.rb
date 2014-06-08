@@ -20,7 +20,7 @@ Bundler.require(:default, ENV['RACK_ENV'].to_sym)
 db_config = {
   #adapter:  'sqlite3',
   adapter: 'postgresql',
-  database: 'football.db',
+  database: 'football',
   username: 'postgres',
   password: 'code*03'    # NOTE: change to use your db of choice (e.g. worldcup.db, bundesliga.db, ski.db etc.)
 }
