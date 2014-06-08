@@ -1,5 +1,6 @@
 
-ENV['RACK_ENV'] ||= 'development'
+#ENV['RACK_ENV'] ||= 'development'
+ENV['RACK_ENV'] ||= 'production'
 
 puts "ENV['RACK_ENV'] = #{ENV['RACK_ENV']}"
 
