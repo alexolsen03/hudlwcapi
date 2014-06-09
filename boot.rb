@@ -27,12 +27,7 @@ Bundler.require(:default, ENV['RACK_ENV'].to_sym)
 #   # #database: 'football',
 #   # database: 'hudlwcapi_prod',
 #   # username: 'postgres',
-#   # password: 'code*03'    # NOTE: change to use your db of choice (e.g. worldcup.db, bundesliga.db, ski.db etc.)
-#     adapter: 'postgresql',
-#   database: 'd6vv46ice2jscv',
-#   username: 'wfjlgnuichedor',
-#   password: 'zm90p7LR0diJ3SoA8_2fEpZuT',
-#   host: 'ec2-54-225-243-113.compute-1.amazonaws.com'
+#   # password: ''    # NOTE: change to use your db of choice (e.g. worldcup.db, bundesliga.db, ski.db etc.)
 # }
 
 # pp db_config

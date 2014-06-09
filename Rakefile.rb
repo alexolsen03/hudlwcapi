@@ -7,12 +7,7 @@ DB_CONFIG = {
   # #:database  =>  FOOTBALL_DB_PATH,
   # database: 'hudlwcapi_prod',
   # username: 'postgres',
-  # password: 'code*03'
-  adapter: 'postgresql',
-  database: 'd6vv46ice2jscv',
-  username: 'wfjlgnuichedor',
-  password: 'zm90p7LR0diJ3SoA8_2fEpZuT'
-
+  # password: ''
 }
 
 directory BUILD_DIR
